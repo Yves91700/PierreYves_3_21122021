@@ -1,3 +1,107 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0; 
+$color-fond: #f2f2f2;
+
+.localisation{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(185, 183, 183);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserv{
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    padding-left: 5Opx;
+    background-color: white;
+}
+.btn{
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    max-width: 15rem;
+    margin-top: 20px;
+    padding: 0.3rem;
+    line-height: 3em;
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 900;
+    background: linear-gradient(to top left, $color-primary 20%, $color-secondary);
+    box-shadow: 2px 8px 8px grey;
+    &:hover{
+        background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
+    }
+}
+nav {
+    background-color:gold;
+    width: 100%;
+    height: 400px;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+li {
+    background: #f2f2f2;
+    display: block;
+    border-radius: 30px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ol {
+    justify-content: space-between;
+}
+.card
+{
+  display: block;
+  border-radius: 20px;
+  background-color: white;
+  padding-left: 5px;
+  width: 95%;
+  height: 250px; 
+  box-shadow: 5px 5px 5px 1px #f2f2f2; 
+}
+.card a
+{
+  text-decoration: none; 
+}
+
+.cardimg1{
+  object-fit: cover;
+  width: 100%;
+  height:100px;
+  border-radius: 15px 15px 0 0;
+}
+.list-resto
+{
+    width: 100%;
+    height: 900px;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 300px;
+}
+
