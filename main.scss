@@ -2,22 +2,46 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0; 
 $color-fond: #f2f2f2;
+$color-grey: rgb(53, 53, 53);
+$color-grey2: lighten($color-grey,65%);
+$color-grey3: lighten($color-grey,75%);
+
+header {
+    & h1{
+        font-family: roboto ;
+        font-style: italic;
+        font-weight: 900;
+    }
+    & i{
+        padding-right: 10px;
+    }
+}
 
 .localisation{
     width: 100%;
     height: 50px;
-    background-color: rgb(185, 183, 183);
+    background-color: $color-grey2;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .reserv{
-    background-color: #f2f2f2;
+    background-color: $color-grey3;
     width: 100%;
     height: 300px;
     display: flex;
     flex-direction: column;
+    & h2{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
+    }
+    & p{
+        margin-left: 40px;
+        color: $color-grey;
+    }
 }
 .logo{
     width: 80%;
@@ -31,12 +55,13 @@ $color-fond: #f2f2f2;
     cursor: pointer;
     display: block;
     margin: auto;
-    max-width: 15rem;
+    width: 200px;
     margin-top: 20px;
     padding: 0.3rem;
     line-height: 3em;
     border-radius: 30px 30px 30px 30px;
     text-align: center;
+    text-decoration: none;
     color: white;
     font-size: 1rem;
     font-weight: 900;
@@ -47,16 +72,23 @@ $color-fond: #f2f2f2;
     }
 }
 nav {
-    background-color:gold;
+    background-color:white;
     width: 100%;
     height: 400px;
     justify-content: space-between;
     border: 1px solid red;
-}
-li {
-    background: #f2f2f2;
+    border-radius: 5px;
+   & li {
+    background: $color-grey3;
     display: block;
     border-radius: 30px;
+    font-size: 20px;
+    height: 70px;
+    margin-right: 20px;
+    &:hover{
+        background-color: $color-grey2;
+    }
+}
 }
 .menu{
     display: flex;
@@ -74,12 +106,19 @@ ol {
   padding-left: 5px;
   width: 95%;
   height: 250px; 
-  box-shadow: 5px 5px 5px 1px #f2f2f2; 
+  
+  & a{
+text-decoration: none;
+color: black;
+font-size: 16px;
+  }
+  &__description{
+    box-shadow: 5px 5px 5px 1px $color-grey; 
+    display: flex;
+
+  }
 }
-.card a
-{
-  text-decoration: none; 
-}
+
 
 .cardimg1{
   object-fit: cover;
@@ -99,9 +138,23 @@ ol {
 }
 
 footer{
-    background-color: black;
+    background-color: $color-grey;
     color: white;
     width: 100%;
-    height: 300px;
+    height: 250px;
+    font-size: 18px;
+    padding-left: 20px;
+    & h2{
+        font-style: italic;
+        padding-top: 20px;
+    }
+    & i{
+        padding-right: 10px;
+        width: 1.2rem;
+    }
+    & ul{
+        list-style: none;
+        padding-left: 0px;
+    }
 }
 

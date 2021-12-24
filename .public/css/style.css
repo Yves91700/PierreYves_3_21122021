@@ -1,18 +1,37 @@
+header h1 {
+  font-family: roboto;
+  font-style: italic;
+  font-weight: 900;
+}
+header i {
+  padding-right: 10px;
+}
+
 .localisation {
   width: 100%;
   height: 50px;
-  background-color: #b9b7b7;
+  background-color: #dbdbdb;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .reserv {
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
   width: 100%;
   height: 300px;
   display: flex;
   flex-direction: column;
+}
+.reserv h2 {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+.reserv p {
+  margin-left: 40px;
+  color: #353535;
 }
 
 .logo {
@@ -28,12 +47,13 @@
   cursor: pointer;
   display: block;
   margin: auto;
-  max-width: 15rem;
+  width: 200px;
   margin-top: 20px;
   padding: 0.3rem;
   line-height: 3em;
   border-radius: 30px 30px 30px 30px;
   text-align: center;
+  text-decoration: none;
   color: white;
   font-size: 1rem;
   font-weight: 900;
@@ -45,17 +65,23 @@
 }
 
 nav {
-  background-color: gold;
+  background-color: white;
   width: 100%;
   height: 400px;
   justify-content: space-between;
   border: 1px solid red;
+  border-radius: 5px;
 }
-
-li {
-  background: #f2f2f2;
+nav li {
+  background: #f4f4f4;
   display: block;
   border-radius: 30px;
+  font-size: 20px;
+  height: 70px;
+  margin-right: 20px;
+}
+nav li:hover {
+  background-color: #dbdbdb;
 }
 
 .menu {
@@ -75,11 +101,15 @@ ol {
   padding-left: 5px;
   width: 95%;
   height: 250px;
-  box-shadow: 5px 5px 5px 1px #f2f2f2;
 }
-
 .card a {
   text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+.card__description {
+  box-shadow: 5px 5px 5px 1px #353535;
+  display: flex;
 }
 
 .cardimg1 {
@@ -100,10 +130,24 @@ ol {
 }
 
 footer {
-  background-color: black;
+  background-color: #353535;
   color: white;
   width: 100%;
-  height: 300px;
+  height: 250px;
+  font-size: 18px;
+  padding-left: 20px;
+}
+footer h2 {
+  font-style: italic;
+  padding-top: 20px;
+}
+footer i {
+  padding-right: 10px;
+  width: 1.2rem;
+}
+footer ul {
+  list-style: none;
+  padding-left: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
