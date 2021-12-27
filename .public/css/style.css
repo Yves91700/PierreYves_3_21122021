@@ -1,6 +1,5 @@
 header h1 {
-  font-family: roboto;
-  font-style: italic;
+  font-family: shrikhand, cursive;
   font-weight: 900;
 }
 header i {
@@ -110,6 +109,14 @@ ol {
 .card__description {
   box-shadow: 5px 5px 5px 1px #353535;
   display: flex;
+  border-radius: 10px;
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.fond {
+  background-color: #f2f2f2;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .cardimg1 {
@@ -129,6 +136,24 @@ ol {
   border: 1px solid red;
 }
 
+.categorie {
+  width: 90%;
+}
+.categorie h5 {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.line {
+  margin-top: 2px;
+  margin-bottom: 32px;
+  width: 35px;
+  border-top: 3px solid #99E2D0;
+}
+
 footer {
   background-color: #353535;
   color: white;
@@ -137,8 +162,9 @@ footer {
   font-size: 18px;
   padding-left: 20px;
 }
-footer h2 {
-  font-style: italic;
+footer h3 {
+  font-family: shrikhand;
+  font-weight: normal;
   padding-top: 20px;
 }
 footer i {
