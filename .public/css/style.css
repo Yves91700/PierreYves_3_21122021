@@ -1,9 +1,49 @@
 header h1 {
-  font-family: shrikhand, cursive;
+  font-family: "shrikhand", cursive;
   font-weight: 900;
 }
 header i {
   padding-right: 10px;
+}
+
+h2, h3, h5, p, li, div, a {
+  font-family: "roboto", sans serif;
+}
+
+main h1 {
+  font-family: "shrikhand", cursive;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+main h5 {
+  color: #7a7878;
+  margin-left: 10px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 6.25rem;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: space-between;
+}
+.subtitle p {
+  margin-top: 1px;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #7a7878;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.subtitle span {
+  padding-right: 10px;
+  color: black;
+  font-weight: 900;
 }
 
 .localisation {
@@ -68,28 +108,35 @@ nav {
   width: 100%;
   height: 400px;
   justify-content: space-between;
-  border: 1px solid red;
+  border: 1px solid black;
   border-radius: 5px;
 }
 nav li {
+  justify-content: space-between;
+  width: 95%;
+  height: 70px;
   background: #f4f4f4;
-  display: block;
   border-radius: 30px;
   font-size: 20px;
-  height: 70px;
   margin-right: 20px;
 }
 nav li:hover {
   background-color: #dbdbdb;
 }
+nav li p {
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav li i {
+  margin-left: 10px;
+  font-size: 20px;
+}
 
 .menu {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-ol {
   justify-content: space-between;
 }
 
@@ -107,11 +154,22 @@ ol {
   font-size: 16px;
 }
 .card__description {
-  box-shadow: 5px 5px 5px 1px #353535;
+  box-shadow: 5px 5px 5px 1px #dbdbdb;
+  background: white;
   display: flex;
   border-radius: 10px;
   width: 95%;
+  height: 70px;
+  margin-left: 10px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+}
+.card__description h3 {
+  font-size: 16px;
+  margin-top: 10px;
+  padding-left: 10px;
 }
 
 .fond {
@@ -133,7 +191,6 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid red;
 }
 
 .categorie {
@@ -150,7 +207,8 @@ ol {
 .line {
   margin-top: 2px;
   margin-bottom: 32px;
-  width: 35px;
+  margin-left: 10px;
+  width: 50px;
   border-top: 3px solid #99E2D0;
 }
 
