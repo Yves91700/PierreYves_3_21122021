@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 header h1 {
   font-family: "shrikhand", cursive;
   font-weight: 900;
@@ -20,30 +22,12 @@ main h5 {
   margin-left: 10px;
 }
 
+/* title pour logo ohmyfood */
 .title {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-right: 6.25rem;
-}
-
-.subtitle {
-  display: flex;
-  justify-content: space-between;
-}
-.subtitle p {
-  margin-top: 1px;
-  white-space: nowrap;
-  font-size: 14px;
-  color: #7a7878;
-  padding-left: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.subtitle span {
-  padding-right: 10px;
-  color: black;
-  font-weight: 900;
 }
 
 .localisation {
@@ -55,6 +39,7 @@ main h5 {
   justify-content: center;
 }
 
+/* reserv pour la partie reserver de la page accueil*/
 .reserv {
   background-color: #f4f4f4;
   width: 100%;
@@ -82,6 +67,7 @@ main h5 {
   background-color: white;
 }
 
+/*btn pour le bouton explorer et commander*/
 .btn {
   cursor: pointer;
   display: block;
@@ -103,6 +89,7 @@ main h5 {
   background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
 }
 
+/* nav pour la partie commander page accueil*/
 nav {
   background-color: white;
   width: 100%;
@@ -134,6 +121,7 @@ nav li i {
   font-size: 20px;
 }
 
+/* partie menu de la page accueil*/
 .menu {
   display: flex;
   flex-direction: column;
@@ -141,12 +129,13 @@ nav li i {
 }
 
 .card {
-  display: block;
+  display: flex;
   border-radius: 20px;
   background-color: white;
   padding-left: 5px;
   width: 95%;
   height: 250px;
+  border: 1px solid blue;
 }
 .card a {
   text-decoration: none;
@@ -154,12 +143,16 @@ nav li i {
   font-size: 16px;
 }
 .card__description {
+  cursor: pointer;
+  position: relative;
   box-shadow: 5px 5px 5px 1px #dbdbdb;
   background: white;
   display: flex;
+  align-items: stretch;
+  overflow: hidden;
   border-radius: 10px;
   width: 95%;
-  height: 70px;
+  height: 60px;
   margin-left: 10px;
   margin-bottom: 20px;
   display: flex;
@@ -168,25 +161,66 @@ nav li i {
 }
 .card__description h3 {
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 1px;
   padding-left: 10px;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: space-between;
+}
+.subtitle p {
+  margin-top: 2px;
+  margin-bottom: 1px;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #7a7878;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.subtitle span {
+  padding-right: 10px;
+  color: black;
+  font-weight: 900;
+}
+
+/* title-menu configuration du coeur provisoire en attendant svg animation*/
+.title-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+.title-menu i {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.img-menu {
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
 }
 
 .fond {
   background-color: #f2f2f2;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 3rem 3rem 0 0;
 }
 
 .cardimg1 {
   object-fit: cover;
   width: 100%;
-  height: 100px;
+  height: 200px;
   border-radius: 15px 15px 0 0;
 }
 
 .list-resto {
   width: 100%;
-  height: 900px;
+  height: 75rem;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
