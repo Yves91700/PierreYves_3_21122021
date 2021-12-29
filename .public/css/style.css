@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+header {
+  height: 270px;
+}
 header h1 {
   font-family: "shrikhand", cursive;
   font-weight: 900;
@@ -155,6 +158,7 @@ nav li i {
   height: 60px;
   margin-left: 10px;
   margin-bottom: 20px;
+  padding-top: 5px;
   display: flex;
   flex-direction: column;
   line-height: normal;
@@ -202,6 +206,8 @@ nav li i {
   object-fit: cover;
   background-size: cover;
   background-position: center;
+  position: absolute;
+  top: 0.3;
   width: 100%;
   height: 200px;
 }
@@ -209,6 +215,10 @@ nav li i {
 .fond {
   background-color: #f2f2f2;
   border-radius: 3rem 3rem 0 0;
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 .cardimg1 {
@@ -247,6 +257,8 @@ nav li i {
 }
 
 footer {
+  position: relative;
+  display: block;
   background-color: #353535;
   color: white;
   width: 100%;
