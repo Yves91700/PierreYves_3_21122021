@@ -13,8 +13,10 @@ $color-grey3: lighten($color-grey,75%);
 $font-text: 'roboto', sans serif;
 $font-logo-title:'shrikhand', cursive; 
 
+
+
 header {
-    height: 270px;
+    height: 300px;
 
     & h1{
         font-family: $font-logo-title;
@@ -29,8 +31,11 @@ header {
 }
 header a {
     text-decoration: none;
+    font-family: $font-logo-title;
+    font-weight: 900;
     color: black;
 }
+
 
  h2, h3, h5, p,li, div, a {
 font-family: $font-text;
@@ -46,6 +51,9 @@ main{
     & h5{
         color: rgb(122, 120, 120);
         margin-left: 10px;
+    }
+    & h2{
+        margin-left: 20px;
     }
 }
 /* title pour logo ohmyfood */
@@ -115,7 +123,8 @@ main{
 nav {
     background-color:white;
     width: 100%;
-    height: 400px;
+    
+    
     justify-content: space-between;
     border: 1px solid black;
     border-radius: 5px;
@@ -150,24 +159,98 @@ nav {
     flex-direction: column;
     justify-content: space-between;
 }
+.restaurant__img--new {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top:48rem;
+    right: 2.5rem;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.8;
+    color: #2c9c81;
+    background-color: #99E2D0;
+    font-weight: bold;
+    border-radius: 2px;
 
+}
 
-.card
+.restaurant__img--new2 {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 69rem;
+    right: 2.5rem;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.8;
+    color: #2c9c81;
+    background-color: #99E2D0;
+    font-weight: bold;
+    border-radius: 2px;
+
+}
+.cardimg1{
+    
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    background-position: center;
+    padding-top: 10px;
+    width: 100%;
+    height:200px;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+.card /* pour les cards page accueil*/
 {
   display: flex;
+  flex-direction: column;
   border-radius: 20px;
-  background-color: white;
-  padding-left: 5px;
-  width: 95%;
-  height: 250px; 
-  border: 1px solid blue ;
+  background: white;
+  margin-left: 20px;
+  width: 90%;
+  height: 300px; 
+  box-shadow:5px 5px 5px 1px $color-grey2; 
   
   & a{
 text-decoration: none;
 color: black;
 font-size: 16px;
   }
-  &__description{
+  &__title{
+    
+    display: flex;
+    flex-direction:column;
+  }
+  & h3{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    padding-left: 10px;
+} 
+& p{
+    margin-top: 2px;
+    margin-bottom: 1px;
+    white-space: nowrap;
+    font-size: 16px;
+    color: rgb(122, 120, 120);
+    padding-left: 10px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+& i{
+   
+    margin-left: 170px;
+    font-size: 24px;
+}
+}
+
+  .card__description /*pour les cards des pages menu des restos*/
+  {
       cursor: pointer;
       position: relative;
       
@@ -192,7 +275,7 @@ font-size: 16px;
         padding-left: 10px;
     } 
   } 
-}
+
 .subtitle{
     display: flex;
     justify-content: space-between;
@@ -225,7 +308,8 @@ font-size: 16px;
         font-size: 20px;
     }
 }
-.img-menu{
+.img-menu /* ce sont les images des pages menus des resto*/
+{
     object-fit: cover;
     background-size: cover;
     background-position:center;
@@ -244,22 +328,21 @@ font-size: 16px;
     width: 100%;
     margin: 0px;
     padding: 0px;
+}
+
+.fond-accueil{
+    
+    background-color: $color-fond;
+    width: 100%;
     
     
 }
 
 
-
-.cardimg1{
-  object-fit: cover;
-  width: 100%;
-  height:200px;
-  border-radius: 15px 15px 0 0;
-}
 .list-resto
 {
     width: 100%;
-    height: 75rem;
+    height: 84rem;
     background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
@@ -287,7 +370,7 @@ font-size: 16px;
 }
 
 footer{
-    position: relative;
+    
     display: block;
     
     background-color: $color-grey;

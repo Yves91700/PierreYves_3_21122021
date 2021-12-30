@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 header {
-  height: 270px;
+  height: 300px;
 }
 header h1 {
   font-family: "shrikhand", cursive;
@@ -14,6 +14,8 @@ header i {
 
 header a {
   text-decoration: none;
+  font-family: "shrikhand", cursive;
+  font-weight: 900;
   color: black;
 }
 
@@ -29,6 +31,9 @@ main h1 {
 main h5 {
   color: #7a7878;
   margin-left: 10px;
+}
+main h2 {
+  margin-left: 20px;
 }
 
 /* title pour logo ohmyfood */
@@ -102,7 +107,6 @@ main h5 {
 nav {
   background-color: white;
   width: 100%;
-  height: 400px;
   justify-content: space-between;
   border: 1px solid black;
   border-radius: 5px;
@@ -137,20 +141,89 @@ nav li i {
   justify-content: space-between;
 }
 
+.restaurant__img--new {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 48rem;
+  right: 2.5rem;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.8;
+  color: #2c9c81;
+  background-color: #99E2D0;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.restaurant__img--new2 {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 69rem;
+  right: 2.5rem;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.8;
+  color: #2c9c81;
+  background-color: #99E2D0;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.cardimg1 {
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  background-position: center;
+  padding-top: 10px;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+
 .card {
   display: flex;
+  flex-direction: column;
   border-radius: 20px;
-  background-color: white;
-  padding-left: 5px;
-  width: 95%;
-  height: 250px;
-  border: 1px solid blue;
+  background: white;
+  margin-left: 20px;
+  width: 90%;
+  height: 300px;
+  box-shadow: 5px 5px 5px 1px #dbdbdb;
 }
 .card a {
   text-decoration: none;
   color: black;
   font-size: 16px;
 }
+.card__title {
+  display: flex;
+  flex-direction: column;
+}
+.card h3 {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  padding-left: 10px;
+}
+.card p {
+  margin-top: 2px;
+  margin-bottom: 1px;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #7a7878;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card i {
+  margin-left: 170px;
+  font-size: 24px;
+}
+
 .card__description {
   cursor: pointer;
   position: relative;
@@ -227,16 +300,14 @@ nav li i {
   padding: 0px;
 }
 
-.cardimg1 {
-  object-fit: cover;
+.fond-accueil {
+  background-color: #f2f2f2;
   width: 100%;
-  height: 200px;
-  border-radius: 15px 15px 0 0;
 }
 
 .list-resto {
   width: 100%;
-  height: 75rem;
+  height: 84rem;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
@@ -263,7 +334,6 @@ nav li i {
 }
 
 footer {
-  position: relative;
   display: block;
   background-color: #353535;
   color: white;
