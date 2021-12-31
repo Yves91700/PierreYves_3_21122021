@@ -16,7 +16,7 @@ $font-logo-title:'shrikhand', cursive;
 
 
 header {
-    height: 300px;
+    height: 280px;
 
     & h1{
         font-family: $font-logo-title;
@@ -123,10 +123,10 @@ main{
 nav {
     background-color:white;
     width: 100%;
-    
+    height: 400px;
     
     justify-content: space-between;
-    border: 1px solid black;
+    
     border-radius: 5px;
    & li {
        
@@ -163,7 +163,7 @@ nav {
     display: flex;
     position: absolute;
     right: 10px;
-    top:48rem;
+    top:50rem;
     right: 2.5rem;
     width: 90px;
     height: 30px;
@@ -180,7 +180,7 @@ nav {
     display: flex;
     position: absolute;
     right: 10px;
-    top: 69rem;
+    top: 71rem;
     right: 2.5rem;
     width: 90px;
     height: 30px;
@@ -296,6 +296,8 @@ font-size: 16px;
         font-weight: 900;
     }
 }
+
+
 /* title-menu configuration du coeur provisoire en attendant svg animation*/
 .title-menu{
     display: flex;
@@ -310,24 +312,27 @@ font-size: 16px;
 }
 .img-menu /* ce sont les images des pages menus des resto*/
 {
+    
     object-fit: cover;
     background-size: cover;
     background-position:center;
-    position: absolute;
+    position:absolute;
     top: 0.3;
+    right: 0;
     
     width: 100%;
-    height: 200px;
+    height: 230px;
 }
 
 .fond{
     
     background-color: $color-fond;
+    
     border-radius: 3rem 3rem 0 0;
     position: relative;
     width: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
 }
 
 .fond-accueil{
