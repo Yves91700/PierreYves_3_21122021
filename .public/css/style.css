@@ -1,11 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.loader {
+  background-color: #ffff;
+  opacity: 0.9;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  animation: disappear 1s;
+  animation-delay: 2S;
+  animation-fill-mode: forwards;
+}
+
+/* animation du loader*/
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.spinner {
+  /* creation du spinner*/
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  border-left: 10px solid #99E2D0;
+  border-right: 10px solid #99E2D0;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 3s linear infinite;
+  -o-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+  /* placement du loader au milieu de la page */
+  margin: auto;
+  /* ca va centrer le loader au centre de la page */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* on mettant tout les marges a 0 le loader se trouve en plein milieu de la page */
+}
+
+/* animation du spinner*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .grille {
-  max-width: 400px;
-  width: 100%;
+  width: 500px;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, auto);
+  grid-template-columns: repeat(autofill, auto);
 }
 
 .grid-case {
