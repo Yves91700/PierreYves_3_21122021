@@ -66,7 +66,7 @@
   height: auto;
 }
 .grid-case h2 {
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 header {
@@ -154,8 +154,11 @@ main h2 {
   height: 80px;
   display: flex;
   justify-content: center;
-  padding-left: 5Opx;
+  padding-left: 4Opx;
   background-color: white;
+}
+.logo h1 {
+  margin-left: 50px;
 }
 
 /*btn pour le bouton explorer et commander*/
@@ -195,7 +198,7 @@ nav li {
   border-radius: 30px;
   font-size: 18px;
   list-style: none;
-  margin-right: 20px;
+  margin-right: 0px;
   padding-left: 0px;
   margin-left: 0px;
 }
@@ -291,7 +294,7 @@ nav li span {
   flex-wrap: nowrap;
   border-radius: 20px;
   background: white;
-  margin-left: 20px;
+  margin-left: 30px;
   width: 90%;
   height: 280px;
   box-shadow: 5px 5px 5px 1px #dbdbdb;
@@ -363,6 +366,18 @@ nav li span {
   margin-bottom: 1px;
   padding-left: 10px;
 }
+.card__description:hover .card__check {
+  margin-right: 0;
+  transition: all 1s ease;
+}
+.card__description:hover .card__check i {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+}
+.card__description:hover .subtitle {
+  width: 80%;
+  text-overflow: ellipsis;
+}
 
 .subtitle {
   display: flex;
@@ -379,21 +394,58 @@ nav li span {
   text-overflow: ellipsis;
 }
 .subtitle span {
+  display: block;
   padding-right: 10px;
   color: black;
   font-weight: 900;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__check {
+  display: flex;
+  position: absolute;
+  background-color: #99E2D0;
+  right: 0;
+  top: 0;
+  width: 20%;
+  margin-right: -4.3rem;
+  height: 100%;
+}
+.card__check i {
+  cursor: pointer;
+  color: white;
+  background: #99E2D0;
+  font-size: 2rem;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+  margin-left: 1rem;
 }
 
 /* title-menu configuration du coeur  dans les pages menu restos provisoire en attendant svg animation*/
 .title-menu {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   white-space: nowrap;
 }
 .title-menu i {
-  margin-right: 20px;
-  font-size: 20px;
+  position: absolute;
+  right: 1.5rem;
+  top: 35%;
+  font-size: 24px;
+}
+.title-menu .fas {
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.title-menu .fas:hover {
+  opacity: 1;
 }
 
 .img-menu {
@@ -484,5 +536,7 @@ footer ul {
 footer span {
   padding-left: 20px;
 }
+
+/* la partie coeur svg test*/
 
 /*# sourceMappingURL=style.css.map */
