@@ -13,6 +13,26 @@ $color-grey3: lighten($color-grey,75%);
 $font-text: 'roboto', sans serif;
 $font-logo-title:'shrikhand', cursive;
 
+/* media queries*/
+@media all and (min-width: 700px) {
+    .grille {
+      display: grid;
+      grid-template-columns: 1.2fr 2fr;
+    }
+  }
+
+@media all and (min-width: 1023px) {
+    .main {
+      display: grid;
+      grid-template-columns: 1.2fr 2fr;
+    }
+  }
+  @media all and (min-width: 1400px) {
+    .main {
+      grid-template-columns: 1.2fr 3.5fr;
+    }
+  }
+
 
 .loader/*creation de la page loader*/
 {
@@ -407,10 +427,13 @@ transition: all 200ms ease-in-out;
         margin-top: 5px;
         margin-bottom: 1px;
         padding-left: 10px;
+        text-overflow: ellipsis;
     } 
     &:hover .card__check{
         margin-right: 0;
+        transform: translateX(0%);
         transition: all 1s ease;
+        text-overflow: ellipsis;
         
         & i {
             
@@ -420,10 +443,9 @@ transition: all 200ms ease-in-out;
     }
     &:hover .subtitle  {
         width: 80%;
-        text-overflow: ellipsis;
-        
-        
+        text-overflow: ellipsis;   
     }
+    
   } 
 
 .subtitle{
@@ -445,8 +467,7 @@ transition: all 200ms ease-in-out;
         padding-right: 10px;
         color: black;
         font-weight: 900;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: hidden;  
     }
     
 }

@@ -1,6 +1,24 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* media queries*/
+@media all and (min-width: 700px) {
+  .grille {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+  }
+}
+@media all and (min-width: 1023px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+  }
+}
+@media all and (min-width: 1400px) {
+  .main {
+    grid-template-columns: 1.2fr 3.5fr;
+  }
+}
 .loader {
   background-color: #ffff;
   opacity: 0.9;
@@ -366,10 +384,13 @@ nav li span {
   margin-top: 5px;
   margin-bottom: 1px;
   padding-left: 10px;
+  text-overflow: ellipsis;
 }
 .card__description:hover .card__check {
   margin-right: 0;
+  transform: translateX(0%);
   transition: all 1s ease;
+  text-overflow: ellipsis;
 }
 .card__description:hover .card__check i {
   transform: rotate(360deg);
@@ -400,7 +421,6 @@ nav li span {
   color: black;
   font-weight: 900;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .card__check {
