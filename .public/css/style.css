@@ -1,11 +1,44 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+body {
+  width: 100%;
+  margin: 0;
+}
+
 /* media queries*/
 @media all and (min-width: 700px) {
   .container {
     display: grid;
-    grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    grid-template-columns: 3.5fr;
+  }
+
+  .fond-accueil {
+    display: grid;
+    grid-template-columns: 2fr 2.5fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .logo {
+    padding-left: 40px;
+  }
+
+  .title a {
+    margin-right: 10rem;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 0px;
+  }
+
+  .list-resto a {
+    display: grid;
+    grid-template-rows: 3fr 3fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    width: auto;
   }
 }
 @media all and (min-width: 1023px) {
@@ -14,8 +47,20 @@
     grid-template-columns: 1.2fr 1.2fr 1.2fr;
   }
 
+  .logo {
+    display: flex;
+    padding-left: 90px;
+  }
+
+  .title a {
+    margin-right: 20rem;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 0px;
+  }
+
   footer {
-    width: 100%;
+    height: 100%;
   }
 }
 .loader {
@@ -185,7 +230,7 @@ main h2 {
   display: block;
   margin: auto;
   width: 200px;
-  margin-top: 20px;
+  padding-bottom: 20px;
   padding: 0.3rem;
   line-height: 3em;
   border-radius: 30px 30px 30px 30px;
@@ -538,12 +583,12 @@ nav li span {
 
 footer {
   display: block;
-  position: relative;
   top: 200px;
+  position: relative;
   background-color: #353535;
   color: white;
-  width: 83%;
-  height: 230px;
+  width: auto;
+  height: auto;
   font-size: 16px;
   padding-left: 20px;
   padding-right: 40px;
