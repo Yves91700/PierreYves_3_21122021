@@ -15,17 +15,24 @@ body {
 
   .container-case1 {
     display: grid;
-    grid-template-columns: 2.5fr 2.5fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     padding-right: 100px;
-    padding-left: 0px;
-    padding-top: 60px;
+    padding-left: 40px;
   }
   .container-case1 h2 {
-    margin-top: 0px;
-    padding-top: 0px;
+    position: absolute;
+    top: 0;
   }
-  .container-case1 .card {
-    margin-top: 30px;
+  .container-case1 .restaurant__img--new2 {
+    position: relative;
+    top: -10rem;
+    right: -10rem;
+  }
+  .container-case1 .restaurant__img--new {
+    position: relative;
+    right: -10rem;
+    top: -10rem;
   }
 
   .logo {
@@ -71,6 +78,13 @@ body {
     justify-content: flex-start;
     padding-left: 0;
     margin-left: 0px;
+  }
+
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    padding-left: 4rem;
   }
 
   footer {
@@ -361,9 +375,9 @@ nav li span {
 
 .restaurant__img--new {
   display: flex;
-  position: absolute;
-  top: 5rem;
-  right: 3.7rem;
+  position: relative;
+  top: -10rem;
+  right: -12rem;
   width: 90px;
   height: 30px;
   text-align: center;
@@ -376,9 +390,9 @@ nav li span {
 
 .restaurant__img--new2 {
   display: flex;
-  position: absolute;
-  top: 26.5rem;
-  right: 3.7rem;
+  position: relative;
+  top: -10rem;
+  right: -12rem;
   width: 90px;
   height: 30px;
   text-align: center;
@@ -420,6 +434,11 @@ nav li span {
 .card__title {
   position: relative;
   flex-direction: column;
+}
+.card__title1-2 {
+  position: relative;
+  flex-direction: column;
+  top: -1.5rem;
 }
 .card h3 {
   font-size: 20px;
@@ -582,6 +601,7 @@ nav li span {
   justify-content: space-between;
   background-color: #f2f2f2;
   width: 100%;
+  height: auto;
   position: relative;
   top: 200px;
 }

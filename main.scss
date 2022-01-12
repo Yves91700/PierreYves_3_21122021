@@ -28,20 +28,31 @@ body {
     }
     .container-case1{
         display: grid;
-        grid-template-columns: 2.5fr 2.5fr ;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: auto;
         padding-right: 100px;
-        padding-left: 0px;
+        padding-left: 40px;
         
-        padding-top: 60px;
     
         & h2{
-            margin-top: 0px;
-            padding-top: 0px;
+      position: absolute;
+      top: 0;
+      
             
         }
-        .card{
-            margin-top: 30px;
+     .restaurant__img--new2{
+         position: relative;
+            top: -10rem;
+            right:-10rem;
         }
+
+     .restaurant__img--new{
+         position: relative;
+         right: -10rem;
+         top: -10rem;
+     }
+     
+        
     }  
     
     
@@ -89,6 +100,14 @@ width: 100vw;
         padding-left: 0;
         margin-left: 0px;
     }
+    .container-case1{
+        display: grid;
+        grid-template-columns: 2fr 2fr ;
+        grid-template-rows: auto;
+        padding-left: 4rem;
+    }
+
+
     footer{
        height: 100%;
     }
@@ -405,9 +424,9 @@ nav {
 
 .restaurant__img--new {
     display: flex;
-    position: absolute;
-    top:5rem;
-    right: 3.7rem;
+    position: relative;
+    top:-10rem;
+    right: -12rem;
     width: 90px;
     height: 30px;
     text-align: center;
@@ -421,9 +440,9 @@ nav {
 
 .restaurant__img--new2 {
     display: flex;
-    position: absolute;
-    top: 26.5rem;
-    right: 3.7rem;
+    position: relative;
+    top: -10rem;
+    right: -12rem;
     width: 90px;
     height: 30px;
     text-align: center;
@@ -468,6 +487,11 @@ font-size: 16px;
   &__title{
       position: relative;
     flex-direction:column;
+  }
+  &__title1-2{
+      position: relative;
+      flex-direction: column;
+      top: -1.5rem;
   }
   & h3{
     font-size: 20px;
@@ -653,6 +677,7 @@ transition: transform 0.2s;
     
     background-color: $color-fond;
     width: 100%;
+    height: auto;
     position:relative;
     top: 200px;   
 }
