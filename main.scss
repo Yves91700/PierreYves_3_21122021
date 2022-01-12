@@ -26,20 +26,25 @@ body {
         grid-template-columns: 3.5fr  ;
        
     }
-    .grid-case1{
+    .container-case1{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 2.5fr 2.5fr ;
+        padding-right: 100px;
+        padding-left: 0px;
         
         padding-top: 60px;
+    
         & h2{
             margin-top: 0px;
             padding-top: 0px;
             
         }
-        
+        .card{
+            margin-top: 30px;
+        }
+    }  
     
-    }
+    
     .logo{
         padding-left: 40px;
     }
@@ -101,8 +106,13 @@ width: 100vw;
     position: absolute;
     right: 0.6rem;
     top:50%;
-    
     color:black;
+    & .main-stop{
+        stop-color: $color-primary;
+    }
+    & .alt-stop{
+        stop-color: $color-secondary;
+    }
 }
 
 .heart--empty {
@@ -115,8 +125,8 @@ width: 100vw;
   }
   .heart--full {
     z-index: 2;
-    fill: $color-primary;
-    stroke: $color-primary;
+    fill:url(#gradient);
+    stroke:url(#gradient);
     opacity: 0;
     transform: scale(0);
     transition: all 0.5s;
@@ -509,13 +519,13 @@ font-size: 16px;
     &:hover .card__check{
         margin-right: 0;
         transform: translateX(0%);
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         text-overflow: ellipsis;
         
         & i {
             
             transform: rotate(360deg);
-            transition: transform 0.5s;
+            transition: transform 0.3s;
         }   
     }
     &:hover .subtitle  {
@@ -576,7 +586,7 @@ transition: transform 0.2s;
     justify-content: center;
     margin-left: 1rem;
     transform: rotate(0);
-    transition: transform 0.5s; 
+    transition: transform 0.2s; 
 }
 
 }
@@ -644,22 +654,10 @@ transition: transform 0.2s;
     background-color: $color-fond;
     width: 100%;
     position:relative;
-    top: 200px;
-    
-    
+    top: 200px;   
 }
 
 
-.list-resto
-{
-    width: 100%;
-    height: 84rem;
-    background-color: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-}
 .categorie{
     width: 90%;
     
@@ -669,9 +667,9 @@ transition: transform 0.2s;
         margin-bottom: 0;
         font-size: 1.2rem;
         font-weight: normal;
-    }
-   
+    }  
 }
+
 .line{
     margin-top: 2px;
     margin-bottom: 32px;

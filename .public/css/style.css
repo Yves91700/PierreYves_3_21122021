@@ -13,15 +13,19 @@ body {
     grid-template-columns: 3.5fr;
   }
 
-  .grid-case1 {
+  .container-case1 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 2.5fr 2.5fr;
+    padding-right: 100px;
+    padding-left: 0px;
     padding-top: 60px;
   }
-  .grid-case1 h2 {
+  .container-case1 h2 {
     margin-top: 0px;
     padding-top: 0px;
+  }
+  .container-case1 .card {
+    margin-top: 30px;
   }
 
   .logo {
@@ -81,6 +85,12 @@ body {
   top: 50%;
   color: black;
 }
+.heart .main-stop {
+  stop-color: #9356DC;
+}
+.heart .alt-stop {
+  stop-color: #FF79DA;
+}
 
 .heart--empty {
   z-index: 1;
@@ -94,8 +104,8 @@ body {
 
 .heart--full {
   z-index: 2;
-  fill: #9356DC;
-  stroke: #9356DC;
+  fill: url(#gradient);
+  stroke: url(#gradient);
   opacity: 0;
   transform: scale(0);
   transition: all 0.5s;
@@ -458,12 +468,12 @@ nav li span {
 .card__description:hover .card__check {
   margin-right: 0;
   transform: translateX(0%);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   text-overflow: ellipsis;
 }
 .card__description:hover .card__check i {
   transform: rotate(360deg);
-  transition: transform 0.5s;
+  transition: transform 0.3s;
 }
 .card__description:hover .subtitle {
   width: 80%;
@@ -518,7 +528,7 @@ nav li span {
   justify-content: center;
   margin-left: 1rem;
   transform: rotate(0);
-  transition: transform 0.5s;
+  transition: transform 0.2s;
 }
 
 /* title-menu configuration du coeur  dans les pages menu restos */
@@ -574,15 +584,6 @@ nav li span {
   width: 100%;
   position: relative;
   top: 200px;
-}
-
-.list-resto {
-  width: 100%;
-  height: 84rem;
-  background-color: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .categorie {
