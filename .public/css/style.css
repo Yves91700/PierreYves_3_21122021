@@ -55,7 +55,7 @@ body {
   }
 
   nav li {
-    width: 100vw;
+    width: 90%;
   }
 
   footer {
@@ -84,13 +84,56 @@ body {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: auto;
-    padding-left: 4rem;
+    padding-left: 10rem;
+  }
+  .container-case1 h2 {
+    left: 1rem;
+  }
+
+  .fond {
+    height: 620px;
+  }
+
+  .btn1 {
+    position: relative;
+    top: 5rem;
   }
 
   footer {
     height: 100%;
   }
 }
+@media all and (min-width: 1400px) {
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: auto;
+    padding-left: 25rem;
+  }
+
+  .btn1 {
+    position: relative;
+    top: 5rem;
+  }
+
+  .title a {
+    display: flex;
+    margin-left: 0px;
+  }
+}
+@media all and (min-width: 1900px) {
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: auto;
+    padding-left: 40rem;
+  }
+
+  .title a {
+    margin-left: 0px;
+  }
+}
+/* fin media queries*/
 /* coeur en svg*/
 .heart {
   width: 30px;
@@ -287,7 +330,7 @@ main h2 {
   margin-left: 50px;
 }
 
-/*btn pour le bouton explorer et commander*/
+/*btn pour le bouton explorer */
 .btn {
   cursor: pointer;
   display: block;
@@ -306,6 +349,27 @@ main h2 {
   box-shadow: 2px 8px 8px grey;
 }
 .btn:hover {
+  background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
+}
+
+.btn1 {
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  width: 200px;
+  padding-bottom: 20px;
+  padding: 0.3rem;
+  line-height: 3em;
+  border-radius: 30px 30px 30px 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
+  box-shadow: 2px 8px 8px grey;
+}
+.btn1:hover {
   background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
 }
 
@@ -438,7 +502,7 @@ nav li span {
 .card__title1-2 {
   position: relative;
   flex-direction: column;
-  top: -1.5rem;
+  top: -1.6rem;
 }
 .card h3 {
   font-size: 20px;
