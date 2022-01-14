@@ -1,0 +1,14 @@
+@mixin card-new {
+    display: flex;
+    position: relative;
+    top:-10rem;
+    right: -12rem;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.8;
+    color: #2c9c81;
+    background-color: #99E2D0;
+    font-weight: bold;
+    border-radius: 2px;  
+}

@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+@import"./sass/utils/_variables";
+@import"./sass/utils/_animations";
+@import"./sass/utils/_mixins";
+@import"./sass/base/_base";
+@import"./sass/base/_typography";
+@import"./sass/components/_buttons";
+@import"./sass/layouts/_header";
+@import"./sass/layouts/_footer";
 
 
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0; 
-$color-fond: #f2f2f2;
-$color-grey: rgb(53, 53, 53);
-$color-grey2: lighten($color-grey,65%);
-$color-grey3: lighten($color-grey,75%);
-$font-text: 'roboto', sans serif;
-$font-logo-title:'shrikhand', cursive;
-$color-gradient:linear-gradient(to top left, $color-primary 20%, $color-secondary);
-
-body {
-    width: 100%;
-    margin: 0;
-}
 
 /* media queries*/
+@media all and (min-width: 500px){
+    .container-case1{
+        padding-left: 80px;   
+    }
+    .container-case1 h2{
+        margin-left: -60px;
+        
+    }
+}
+
+/*debut des medias queries*/ 
 @media all and (min-width: 700px){
     .container{
         display: grid;
@@ -34,7 +36,8 @@ body {
         
         & h2{
       position: absolute;
-      top: 0;    
+      top: 0; 
+      margin-left: 0px;   
         }
      .restaurant__img--new2{
          position: relative;
@@ -70,15 +73,8 @@ body {
     nav li {
         
     width: 90%;
-    }
-    
-    
-    footer {
-        width: auto;
-    }
-    
+    }   
 }
-
 
 @media all and (min-width: 1023px) {
 
@@ -110,17 +106,16 @@ body {
     }
     .btn1{
         position: relative;
-        top: 5rem;
+        top: 10rem;
     }
-
-    footer{
-       height: 100%;
-       
-    }
-
   }
 
 
+@media all and (min-width:1200px){
+    .container-case1{
+        padding-left: 16rem;
+    }
+}
 
   @media all and (min-width: 1400px) {
     .container-case1{
@@ -131,7 +126,7 @@ body {
     }
     .btn1{
         position: relative;
-        top: 5rem;
+        top: 6rem;
     }
     .title a {
         display: flex;
@@ -149,104 +144,16 @@ body {
     .title a{
         margin-left: 0px;
     }
+    .logo{
+        padding-left: 150px;
+    }
 }
 /* fin media queries*/
-  /* coeur en svg*/
-.heart{
-    width: 30px;
-    position: absolute;
-    right: 0.6rem;
-    top:50%;
-    color:black;
-    & .main-stop{
-        stop-color: $color-primary;
-    }
-    & .alt-stop{
-        stop-color: $color-secondary;
-    }
-}
-
-
-
-.heart--empty {
-    z-index: 1;
-    stroke: black;
-  }
-  .heart:hover .heart--full {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .heart--full {
-    z-index: 2;
-    fill:url(#gradient);
-    stroke:url(#gradient);
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.5s;
-  }
-/*fin de coeur svg*/
 
 
 
 
-.loader/*creation de la page loader*/
-{
-    background-color: #ffff;
-    opacity: 0.9;
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    animation: disappear 1s;
-    animation-delay: 2S;
-    animation-fill-mode: forwards;
-    
-    
-}
-/* animation du loader*/
-@keyframes disappear {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
 
-}
-.spinner{
-	/* creation du spinner*/
-
-	border-top: 10px solid $color-primary;
-	border-bottom: 10px solid $color-secondary;
-    border-left:10px solid $color-tertiary;
-    border-right:10px solid $color-tertiary;
-	border-radius: 50%;
-	width: 100px;
-	height: 100px;
-	-webkit-animation:spin 3s linear infinite ;
-	-o-animation:spin 3s linear infinite ;
-	animation: spin 3s linear infinite;
-
-	/* placement du loader au milieu de la page */
-
-	margin: auto; /* ca va centrer le loader au centre de la page */
-
-	position:absolute;
-	top: 0; left: 0; right: 0; bottom: 0; /* on mettant tout les marges a 0 le loader se trouve en plein milieu de la page */
-}
-
-/* animation du spinner*/
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100%{
-		transform: rotate(360deg);
-	}
-}
 
 .grille{
     
@@ -261,39 +168,12 @@ body {
     
     height: auto;
     & h2{
-        padding-left: 40px;
+        padding-left: 20px;
     }
     
 }
 
-
-header {
-    height: auto;
-
-    & h1{
-        font-family: $font-logo-title;
-        font-weight: 900;   
-    }
-   
-    & i{
-        padding-right: 10px;
-        font-family: black;   
-    } 
-   
-}
-header a {
-    text-decoration: none;
-    font-family: $font-logo-title;
-    font-weight: 900;
-    color: black;
-}
-
-
- h2, h3, h5, p,li, div, a {
-font-family: $font-text;
-}
 main{
-
 
     & h1{
         font-family: $font-logo-title;
@@ -362,49 +242,7 @@ main{
         margin-left: 50px;
     }
 }
-/*btn pour le bouton explorer */
-.btn{
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    width: 200px;
-    padding-bottom: 20px;
-    padding: 0.3rem;
-    line-height: 3em;
-    border-radius: 30px 30px 30px 30px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: 900;
-    background: linear-gradient(to top left, $color-primary 20%, $color-secondary);
-    box-shadow: 2px 8px 8px grey;
-    &:hover{
-        background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
-    }
-}
 
-.btn1 /*bouton commander dans page menu*/
-{
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    width: 200px;
-    padding-bottom: 20px;
-    padding: 0.3rem;
-    line-height: 3em;
-    border-radius: 30px 30px 30px 30px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: 900;
-    background: linear-gradient(to top left, $color-primary 20%, $color-secondary);
-    box-shadow: 2px 8px 8px grey;
-    &:hover{
-        background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
-    }
-}
 /* nav pour la partie commander page accueil*/
 nav {
     background-color:white;
@@ -426,7 +264,7 @@ nav {
     padding-left: 0px;
     margin-left: 0px;
     &:hover{
-        background-color: $color-grey2;
+        background-color:$color-secondary-light ;
     }
     & p{
         position: relative;
@@ -466,6 +304,9 @@ nav {
 }
 }
 
+
+
+
 /* partie menu de la page accueil*/
 .menu{
     display: flex;
@@ -479,36 +320,14 @@ nav {
 }
 
 .restaurant__img--new {
-    display: flex;
-    position: relative;
-    top:-10rem;
-    right: -12rem;
-    width: 90px;
-    height: 30px;
-    text-align: center;
-    line-height: 1.8;
-    color: #2c9c81;
-    background-color: #99E2D0;
-    font-weight: bold;
-    border-radius: 2px;
-
+   @include card-new;
 }
 
 .restaurant__img--new2 {
-    display: flex;
-    position: relative;
-    top: -10rem;
-    right: -12rem;
-    width: 90px;
-    height: 30px;
-    text-align: center;
-    line-height: 1.8;
-    color: #2c9c81;
-    background-color: #99E2D0;
-    font-weight: bold;
-    border-radius: 2px;
-
+    @include card-new;
 }
+
+
 .cardimg1{
     
     border-radius: 20px 20px 0 0;
@@ -568,58 +387,7 @@ font-size: 16px;
 
 }
 
-  .card__description /*pour les cards des pages menu des restos*/
-  {
-      cursor: pointer;
-      position: relative;
-      
-    box-shadow: 5px 5px 5px 1px $color-grey2; 
-    background: white;
-    display: flex;
-    align-items: stretch;
-    overflow: hidden;
-    border-radius: 10px;
-    width: 95%;
-    height: 60px;
-    margin-left:10px;
-    margin-bottom: 20px;
-    padding-top: 5px;
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    & h3{
-        font-size: 16px;
-        margin-top: 5px;
-        margin-bottom: 1px;
-        padding-left: 10px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    } 
-    &:hover .card__check{
-        margin-right: 0;
-        transform: translateX(0%);
-        transition: all 0.5s ease;
-        text-overflow: ellipsis;
-        
-        & i {
-            
-            transform: rotate(360deg);
-            transition: transform 0.3s;
-        }   
-    }
-    &:hover .subtitle  {
-        width: 80%;
-        text-overflow: ellipsis;   
-    }
-    &:hover h3{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 80%;
-    }
-    
-  } 
-
+  
 .subtitle /*sous titre en gris clair et prix des pages menus*/
 {
     display: flex;
@@ -644,34 +412,6 @@ font-size: 16px;
     }
     
 }
-.card__check/* le petit check vert qui apparait au hover du menu*/
- {
-    display: flex;
-    position: absolute;
-background-color: $color-tertiary;
-right: 0;
-top:0;
-width: 20%;
-height: 100%;
-transform: translateX(100%);
-transition: transform 0.2s;
-
-& i {
-    cursor: pointer;
-    color: white;
-    background: $color-tertiary;
-    font-size: 2rem;
-    display: flex;
-    margin-top: 1rem;
-    justify-content: center;
-    margin-left: 1rem;
-    transform: rotate(0);
-    transition: transform 0.2s; 
-}
-
-}
-
-
 
 /* title-menu configuration du coeur  dans les pages menu restos */
 .title-menu{
@@ -679,58 +419,34 @@ transition: transform 0.2s;
     position: relative;
    justify-content: space-between;
     align-items: center;
-    white-space: nowrap;
-    
-    & i  /*placement du coeur dans les pages menu restos*/
-    {
-       position: absolute;
-        right: 1.5rem;
-        top: 35%;
-        font-size: 24px;
-    }
-    & .fas  /* pour faire l'effet de remplissage du coeur en jouant avec l'opacity*/
-    {
-    color: transparent;
-    background-image:linear-gradient( $color-primary , $color-secondary);
-    background-clip: text;
-    opacity: 0;
-    transition: all 200ms ease-in-out;
-    &:hover  {
-        opacity: 1;
-    }
-    }
+    white-space: nowrap;  
 }
 .img-menu /* ce sont les images des pages menus des resto*/
-{
-    
+{ 
     object-fit: cover;
     background-size: cover;
     background-position:center;
     position:absolute;
     top: 0.3;
     right: 0;
-    
     width: 100%;
     height: 230px;
 }
 
-.fond{
-    
+.fond{ 
     background-color: $color-fond;
-    
     border-radius: 3rem 3rem 0 0;
     position: relative;
     width: 100%;
-    
+    height: 1100px;
     margin-right: 0px;
     padding-right: 0px;
-    top: 200px;
+    top: 220px;
 }
 
 .fond-accueil{
     display: flex;
     justify-content: space-between;
-    
     background-color: $color-fond;
     width: 100%;
     height: auto;
@@ -741,6 +457,7 @@ transition: transform 0.2s;
 
 .categorie{
     width: 90%;
+    height: 50px;
     
     & h5{
         text-transform: uppercase;
@@ -759,84 +476,8 @@ transition: transform 0.2s;
     border-top: 3px solid $color-tertiary;
 }
 
-footer{
-    
-    display: block;
-    top: 200px;
-    position: relative;
-     
-    background-color: $color-grey;
-    color: white;
-    width: auto;
-    height: auto;
-    font-size: 16px;
-    padding-left: 20px;
-    padding-right: 40px;
-    & h3{
-        font-family: shrikhand ;
-        font-weight: normal;
-        padding-top: 20px;
-        padding-left: 20px;
-    }
-    & i{
-        padding-right: 10px;
-        width: 1.2rem;
-        padding-left: 20px;
-    }
-    & ul{
-        list-style: none;
-        padding-left: 0px;
-        
-    }
-    & span{
-        padding-left: 20px;
-    }
-    & a {
-        color: white;
-        text-decoration: none;
-        font-family: $font-text;
-        padding-left: 20px;
-        
-    }
-}
 
-/* la partie animation arrivé des menus test*/
 
-@keyframes menu {
-    0% {
-      transform: translateY(30%);
-      opacity: 0%;
-    }
-    100% {
-      transform: translateY(0%);
-      opacity: 100%;
-    }
-  }
-  .menu > div:nth-of-type(2) {
-    animation: menu 1s 1.6s both;
-  }
-  .menu > div:nth-of-type(3) {
-    animation: menu 1s 1.9s both;
-  }
-  .menu > div:nth-of-type(4) {
-    animation: menu 1s 2.2s both;
-  }
-  .menu > div:nth-of-type(5) {
-    animation: menu 1s 2.5s both;
-  }
-  
-  .container > a:nth-of-type(1) {
-    animation: menu 2s 3.3s both;
-  }
-  .container > a:nth-of-type(2) {
-    animation: menu 2s 3.6s both;
-  }
-  .container > a:nth-of-type(3) {
-    animation: menu 2s 3.9s both;
-  }
-  .container > a:nth-of-type(4) {
-    animation: menu 2s 4.2s both;
-  }
 
 
 

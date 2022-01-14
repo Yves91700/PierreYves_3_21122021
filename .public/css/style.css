@@ -1,174 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-body {
-  width: 100%;
-  margin: 0;
-}
-
-/* media queries*/
-@media all and (min-width: 700px) {
-  .container {
-    display: grid;
-    grid-template-columns: 3.5fr;
-  }
-
-  .container-case1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    padding-right: 100px;
-    padding-left: 40px;
-  }
-  .container-case1 h2 {
-    position: absolute;
-    top: 0;
-  }
-  .container-case1 .restaurant__img--new2 {
-    position: relative;
-    top: -10rem;
-    right: -10rem;
-  }
-  .container-case1 .restaurant__img--new {
-    position: relative;
-    right: -10rem;
-    top: -10rem;
-  }
-
-  .logo {
-    padding-left: 40px;
-  }
-
-  .title a {
-    margin-right: 10rem;
-    justify-content: flex-start;
-    padding-left: 0;
-    margin-left: 0px;
-  }
-
-  .restaurant__img--new2 {
-    right: 6rem;
-  }
-
-  .card {
-    margin-top: 60px;
-  }
-
-  nav li {
-    width: 90%;
-  }
-
-  footer {
-    width: auto;
-  }
-}
-@media all and (min-width: 1023px) {
-  .container {
-    display: grid;
-    grid-template-columns: 1.2fr 1.2fr 1.2fr;
-  }
-
-  .logo {
-    display: flex;
-    padding-left: 90px;
-  }
-
-  .title a {
-    margin-right: 20rem;
-    justify-content: flex-start;
-    padding-left: 0;
-    margin-left: 0px;
-  }
-
-  .container-case1 {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: auto;
-    padding-left: 10rem;
-  }
-  .container-case1 h2 {
-    left: 1rem;
-  }
-
-  .fond {
-    height: 620px;
-  }
-
-  .btn1 {
-    position: relative;
-    top: 5rem;
-  }
-
-  footer {
-    height: 100%;
-  }
-}
-@media all and (min-width: 1400px) {
-  .container-case1 {
-    display: grid;
-    grid-template-columns: 4fr 4fr;
-    grid-template-rows: auto;
-    padding-left: 25rem;
-  }
-
-  .btn1 {
-    position: relative;
-    top: 5rem;
-  }
-
-  .title a {
-    display: flex;
-    margin-left: 0px;
-  }
-}
-@media all and (min-width: 1900px) {
-  .container-case1 {
-    display: grid;
-    grid-template-columns: 4fr 4fr;
-    grid-template-rows: auto;
-    padding-left: 40rem;
-  }
-
-  .title a {
-    margin-left: 0px;
-  }
-}
-/* fin media queries*/
-/* coeur en svg*/
-.heart {
-  width: 30px;
-  position: absolute;
-  right: 0.6rem;
-  top: 50%;
-  color: black;
-}
-.heart .main-stop {
-  stop-color: #9356DC;
-}
-.heart .alt-stop {
-  stop-color: #FF79DA;
-}
-
-.heart--empty {
-  z-index: 1;
-  stroke: black;
-}
-
-.heart:hover .heart--full {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.heart--full {
-  z-index: 2;
-  fill: url(#gradient);
-  stroke: url(#gradient);
-  opacity: 0;
-  transform: scale(0);
-  transition: all 0.5s;
-}
-
-/*fin de coeur svg*/
 .loader {
   background-color: #ffff;
   opacity: 0.9;
@@ -225,17 +57,207 @@ body {
     transform: rotate(360deg);
   }
 }
-.grille {
-  height: auto;
-  display: flex;
-  flex-direction: column;
+/* coeur en svg*/
+.heart {
+  width: 30px;
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  color: grey;
+}
+.heart .main-stop {
+  stop-color: #9356DC;
+}
+.heart .alt-stop {
+  stop-color: #FF79DA;
 }
 
-.grid-case {
-  height: auto;
+.heart--empty {
+  z-index: 1;
+  stroke: grey;
 }
-.grid-case h2 {
-  padding-left: 40px;
+
+.heart:hover .heart--full {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.heart--full {
+  z-index: 2;
+  fill: url(#gradient);
+  stroke: url(#gradient);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+/*fin de coeur svg*/
+.card__description {
+  cursor: pointer;
+  position: relative;
+  box-shadow: 5px 5px 5px 1px #dbdbdb;
+  background: white;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 95%;
+  height: 60px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+}
+.card__description h3 {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.card__description:hover .card__check {
+  margin-right: 0;
+  transform: translateX(0%);
+  transition: all 0.5s ease;
+  text-overflow: ellipsis;
+}
+.card__description:hover .card__check i {
+  transform: rotate(360deg);
+  transition: transform 0.3s;
+}
+.card__description:hover .subtitle {
+  width: 80%;
+  text-overflow: ellipsis;
+}
+.card__description:hover h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.card__check {
+  display: flex;
+  position: absolute;
+  background-color: #99E2D0;
+  right: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.2s;
+}
+.card__check i {
+  cursor: pointer;
+  color: white;
+  background: #99E2D0;
+  font-size: 2rem;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+  margin-left: 1rem;
+  transform: rotate(0);
+  transition: transform 0.2s;
+}
+
+/* la partie animation arrivé des menus test*/
+@keyframes menu {
+  0% {
+    transform: translateY(30%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+.menu > div:nth-of-type(2) {
+  animation: menu 1s 1.6s both;
+}
+
+.menu > div:nth-of-type(3) {
+  animation: menu 1s 1.9s both;
+}
+
+.menu > div:nth-of-type(4) {
+  animation: menu 1s 2.2s both;
+}
+
+.menu > div:nth-of-type(5) {
+  animation: menu 1s 2.5s both;
+}
+
+.container > a:nth-of-type(1) {
+  animation: menu 2s 3.3s both;
+}
+
+.container > a:nth-of-type(2) {
+  animation: menu 2s 3.6s both;
+}
+
+.container > a:nth-of-type(3) {
+  animation: menu 2s 3.9s both;
+}
+
+.container > a:nth-of-type(4) {
+  animation: menu 2s 4.2s both;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+h2, h3, h5, p, li, div, a {
+  font-family: "roboto", sans serif;
+}
+
+/*btn pour le bouton explorer */
+.btn {
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  width: 200px;
+  padding-bottom: 20px;
+  padding: 0.3rem;
+  line-height: 3em;
+  border-radius: 30px 30px 30px 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
+  box-shadow: 2px 8px 8px grey;
+}
+.btn:hover {
+  background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
+}
+
+.btn1 {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  top: 2rem;
+  margin: auto;
+  width: 200px;
+  padding-bottom: 20px;
+  padding: 0.3rem;
+  line-height: 3em;
+  border-radius: 30px 30px 30px 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
+  box-shadow: 2px 8px 8px grey;
+}
+.btn1:hover {
+  background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
 }
 
 header {
@@ -257,8 +279,193 @@ header a {
   color: black;
 }
 
-h2, h3, h5, p, li, div, a {
+footer {
+  display: block;
+  top: 200px;
+  position: relative;
+  background-color: #353535;
+  color: white;
+  width: auto;
+  height: auto;
+  font-size: 16px;
+  padding-left: 20px;
+}
+footer h3 {
+  font-family: shrikhand;
+  font-weight: normal;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+footer i {
+  padding-right: 10px;
+  width: 1.2rem;
+  padding-left: 20px;
+}
+footer ul {
+  list-style: none;
+  padding-left: 0px;
+}
+footer span {
+  padding-left: 20px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
   font-family: "roboto", sans serif;
+  padding-left: 20px;
+}
+
+/* media queries*/
+@media all and (min-width: 500px) {
+  .container-case1 {
+    padding-left: 80px;
+  }
+
+  .container-case1 h2 {
+    margin-left: -60px;
+  }
+}
+/*debut des medias queries*/
+@media all and (min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 3.5fr;
+  }
+
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-right: 100px;
+    padding-left: 40px;
+  }
+  .container-case1 h2 {
+    position: absolute;
+    top: 0;
+    margin-left: 0px;
+  }
+  .container-case1 .restaurant__img--new2 {
+    position: relative;
+    top: -10rem;
+    right: -10rem;
+  }
+  .container-case1 .restaurant__img--new {
+    position: relative;
+    right: -10rem;
+    top: -10rem;
+  }
+
+  .logo {
+    padding-left: 40px;
+  }
+
+  .title a {
+    margin-right: 10rem;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 0px;
+  }
+
+  .restaurant__img--new2 {
+    right: 6rem;
+  }
+
+  .card {
+    margin-top: 60px;
+  }
+
+  nav li {
+    width: 90%;
+  }
+}
+@media all and (min-width: 1023px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr;
+  }
+
+  .logo {
+    display: flex;
+    padding-left: 90px;
+  }
+
+  .title a {
+    margin-right: 20rem;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 0px;
+  }
+
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    padding-left: 10rem;
+  }
+  .container-case1 h2 {
+    left: 1rem;
+  }
+
+  .fond {
+    height: 620px;
+  }
+
+  .btn1 {
+    position: relative;
+    top: 10rem;
+  }
+}
+@media all and (min-width: 1200px) {
+  .container-case1 {
+    padding-left: 16rem;
+  }
+}
+@media all and (min-width: 1400px) {
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: auto;
+    padding-left: 25rem;
+  }
+
+  .btn1 {
+    position: relative;
+    top: 6rem;
+  }
+
+  .title a {
+    display: flex;
+    margin-left: 0px;
+  }
+}
+@media all and (min-width: 1900px) {
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: auto;
+    padding-left: 40rem;
+  }
+
+  .title a {
+    margin-left: 0px;
+  }
+
+  .logo {
+    padding-left: 150px;
+  }
+}
+/* fin media queries*/
+.grille {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-case {
+  height: auto;
+}
+.grid-case h2 {
+  padding-left: 20px;
 }
 
 main h1 {
@@ -330,49 +537,6 @@ main h2 {
   margin-left: 50px;
 }
 
-/*btn pour le bouton explorer */
-.btn {
-  cursor: pointer;
-  display: block;
-  margin: auto;
-  width: 200px;
-  padding-bottom: 20px;
-  padding: 0.3rem;
-  line-height: 3em;
-  border-radius: 30px 30px 30px 30px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  font-weight: 900;
-  background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
-  box-shadow: 2px 8px 8px grey;
-}
-.btn:hover {
-  background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
-}
-
-.btn1 {
-  cursor: pointer;
-  display: block;
-  margin: auto;
-  width: 200px;
-  padding-bottom: 20px;
-  padding: 0.3rem;
-  line-height: 3em;
-  border-radius: 30px 30px 30px 30px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  font-weight: 900;
-  background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
-  box-shadow: 2px 8px 8px grey;
-}
-.btn1:hover {
-  background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
-}
-
 /* nav pour la partie commander page accueil*/
 nav {
   background-color: white;
@@ -393,7 +557,7 @@ nav li {
   margin-left: 0px;
 }
 nav li:hover {
-  background-color: #dbdbdb;
+  background-color: #ffdff6;
 }
 nav li p {
   position: relative;
@@ -521,53 +685,6 @@ nav li span {
   text-overflow: ellipsis;
 }
 
-.card__description {
-  cursor: pointer;
-  position: relative;
-  box-shadow: 5px 5px 5px 1px #dbdbdb;
-  background: white;
-  display: flex;
-  align-items: stretch;
-  overflow: hidden;
-  border-radius: 10px;
-  width: 95%;
-  height: 60px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  padding-top: 5px;
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-}
-.card__description h3 {
-  font-size: 16px;
-  margin-top: 5px;
-  margin-bottom: 1px;
-  padding-left: 10px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.card__description:hover .card__check {
-  margin-right: 0;
-  transform: translateX(0%);
-  transition: all 0.5s ease;
-  text-overflow: ellipsis;
-}
-.card__description:hover .card__check i {
-  transform: rotate(360deg);
-  transition: transform 0.3s;
-}
-.card__description:hover .subtitle {
-  width: 80%;
-  text-overflow: ellipsis;
-}
-.card__description:hover h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 80%;
-}
-
 .subtitle {
   display: flex;
   justify-content: space-between;
@@ -590,30 +707,6 @@ nav li span {
   overflow: hidden;
 }
 
-.card__check {
-  display: flex;
-  position: absolute;
-  background-color: #99E2D0;
-  right: 0;
-  top: 0;
-  width: 20%;
-  height: 100%;
-  transform: translateX(100%);
-  transition: transform 0.2s;
-}
-.card__check i {
-  cursor: pointer;
-  color: white;
-  background: #99E2D0;
-  font-size: 2rem;
-  display: flex;
-  margin-top: 1rem;
-  justify-content: center;
-  margin-left: 1rem;
-  transform: rotate(0);
-  transition: transform 0.2s;
-}
-
 /* title-menu configuration du coeur  dans les pages menu restos */
 .title-menu {
   display: flex;
@@ -621,22 +714,6 @@ nav li span {
   justify-content: space-between;
   align-items: center;
   white-space: nowrap;
-}
-.title-menu i {
-  position: absolute;
-  right: 1.5rem;
-  top: 35%;
-  font-size: 24px;
-}
-.title-menu .fas {
-  color: transparent;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  opacity: 0;
-  transition: all 200ms ease-in-out;
-}
-.title-menu .fas:hover {
-  opacity: 1;
 }
 
 .img-menu {
@@ -655,9 +732,10 @@ nav li span {
   border-radius: 3rem 3rem 0 0;
   position: relative;
   width: 100%;
+  height: 1100px;
   margin-right: 0px;
   padding-right: 0px;
-  top: 200px;
+  top: 220px;
 }
 
 .fond-accueil {
@@ -672,6 +750,7 @@ nav li span {
 
 .categorie {
   width: 90%;
+  height: 50px;
 }
 .categorie h5 {
   text-transform: uppercase;
@@ -687,86 +766,6 @@ nav li span {
   margin-left: 10px;
   width: 50px;
   border-top: 3px solid #99E2D0;
-}
-
-footer {
-  display: block;
-  top: 200px;
-  position: relative;
-  background-color: #353535;
-  color: white;
-  width: auto;
-  height: auto;
-  font-size: 16px;
-  padding-left: 20px;
-  padding-right: 40px;
-}
-footer h3 {
-  font-family: shrikhand;
-  font-weight: normal;
-  padding-top: 20px;
-  padding-left: 20px;
-}
-footer i {
-  padding-right: 10px;
-  width: 1.2rem;
-  padding-left: 20px;
-}
-footer ul {
-  list-style: none;
-  padding-left: 0px;
-}
-footer span {
-  padding-left: 20px;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-  font-family: "roboto", sans serif;
-  padding-left: 20px;
-}
-
-/* la partie animation arrivé des menus test*/
-@keyframes menu {
-  0% {
-    transform: translateY(30%);
-    opacity: 0%;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 100%;
-  }
-}
-.menu > div:nth-of-type(2) {
-  animation: menu 1s 1.6s both;
-}
-
-.menu > div:nth-of-type(3) {
-  animation: menu 1s 1.9s both;
-}
-
-.menu > div:nth-of-type(4) {
-  animation: menu 1s 2.2s both;
-}
-
-.menu > div:nth-of-type(5) {
-  animation: menu 1s 2.5s both;
-}
-
-.container > a:nth-of-type(1) {
-  animation: menu 2s 3.3s both;
-}
-
-.container > a:nth-of-type(2) {
-  animation: menu 2s 3.6s both;
-}
-
-.container > a:nth-of-type(3) {
-  animation: menu 2s 3.9s both;
-}
-
-.container > a:nth-of-type(4) {
-  animation: menu 2s 4.2s both;
 }
 
 /*# sourceMappingURL=style.css.map */

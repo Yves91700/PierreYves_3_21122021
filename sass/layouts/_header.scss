@@ -1,0 +1,21 @@
+
+header {
+    height: auto;
+
+    & h1{
+        font-family: $font-logo-title;
+        font-weight: 900;   
+    }
+   
+    & i{
+        padding-right: 10px;
+        font-family: black;   
+    } 
+   
+}
+header a {
+    text-decoration: none;
+    font-family: $font-logo-title;
+    font-weight: 900;
+    color: black;
+}

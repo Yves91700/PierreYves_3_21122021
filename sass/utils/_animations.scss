@@ -1,0 +1,214 @@
+.loader/*creation de la page loader*/
+{
+    background-color: #ffff;
+    opacity: 0.9;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: disappear 1s;
+    animation-delay: 2S;
+    animation-fill-mode: forwards;
+    
+    
+}
+/* animation du loader*/
+@keyframes disappear {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+
+}
+.spinner{
+	/* creation du spinner*/
+
+	border-top: 10px solid $color-primary;
+	border-bottom: 10px solid $color-secondary;
+    border-left:10px solid $color-tertiary;
+    border-right:10px solid $color-tertiary;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	-webkit-animation:spin 3s linear infinite ;
+	-o-animation:spin 3s linear infinite ;
+	animation: spin 3s linear infinite;
+
+	/* placement du loader au milieu de la page */
+
+	margin: auto; /* ca va centrer le loader au centre de la page */
+
+	position:absolute;
+	top: 0; left: 0; right: 0; bottom: 0; /* on mettant tout les marges a 0 le loader se trouve en plein milieu de la page */
+}
+
+/* animation du spinner*/
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+ 
+  
+  /* coeur en svg*/
+  .heart{
+    width: 30px;
+    position: absolute;
+    right: 0.6rem;
+    top:50%;
+    color:grey;
+    & .main-stop{
+        stop-color: $color-primary;
+    }
+    & .alt-stop{
+        stop-color: $color-secondary;
+    }
+}
+
+
+
+.heart--empty {
+    z-index: 1;
+    stroke: grey;
+  }
+  .heart:hover .heart--full {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .heart--full {
+    z-index: 2;
+    fill:url(#gradient);
+    stroke:url(#gradient);
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s;
+  }
+/*fin de coeur svg*/
+
+.card__description /*pour les cards des pages menu des restos*/
+  {
+      cursor: pointer;
+      position: relative;
+      
+    box-shadow: 5px 5px 5px 1px $color-grey2; 
+    background: white;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 95%;
+    height: 60px;
+    margin-left:10px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    & h3{
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 1px;
+        padding-left: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    } 
+    &:hover .card__check{
+        margin-right: 0;
+        transform: translateX(0%);
+        transition: all 0.5s ease;
+        text-overflow: ellipsis;
+        
+        & i {
+            
+            transform: rotate(360deg);
+            transition: transform 0.3s;
+        }   
+    }
+    &:hover .subtitle  {
+        width: 80%;
+        text-overflow: ellipsis;   
+    }
+    &:hover h3{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80%;
+    }
+    
+  } 
+
+
+.card__check/* le petit check vert qui apparait au hover du menu*/
+ {
+    display: flex;
+    position: absolute;
+background-color: $color-tertiary;
+right: 0;
+top:0;
+width: 20%;
+height: 100%;
+transform: translateX(100%);
+transition: transform 0.2s;
+
+& i {
+    cursor: pointer;
+    color: white;
+    background: $color-tertiary;
+    font-size: 2rem;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    margin-left: 1rem;
+    transform: rotate(0);
+    transition: transform 0.2s; 
+}
+
+}
+
+
+/* la partie animation arrivé des menus test*/
+
+@keyframes menu {
+    0% {
+      transform: translateY(30%);
+      opacity: 0%;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 100%;
+    }
+  }
+
+  .menu > div:nth-of-type(2) {
+    animation: menu 1s 1.6s both;
+  }
+  .menu > div:nth-of-type(3) {
+    animation: menu 1s 1.9s both;
+  }
+  .menu > div:nth-of-type(4) {
+    animation: menu 1s 2.2s both;
+  }
+  .menu > div:nth-of-type(5) {
+    animation: menu 1s 2.5s both;
+  }
+  
+  .container > a:nth-of-type(1) {
+    animation: menu 2s 3.3s both;
+  }
+  .container > a:nth-of-type(2) {
+    animation: menu 2s 3.6s both;
+  }
+  .container > a:nth-of-type(3) {
+    animation: menu 2s 3.9s both;
+  }
+  .container > a:nth-of-type(4) {
+    animation: menu 2s 4.2s both;
+  }
