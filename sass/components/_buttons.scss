@@ -17,6 +17,7 @@
     box-shadow: 2px 8px 8px grey;
     &:hover{
         background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
+        box-shadow: 4px 10px 10px grey;
     }
 }
 
@@ -41,5 +42,6 @@
     box-shadow: 2px 8px 8px grey;
     &:hover{
         background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
+        box-shadow: 4px 10px 10px grey;
     }
 }
