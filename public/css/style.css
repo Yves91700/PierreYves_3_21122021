@@ -330,10 +330,10 @@ nav li span {
   height: auto;
 }
 .menu ul {
-  margin: auto;
+  margin-left: -40px;
 }
 .menu li {
-  width: 280px;
+  width: 290px;
 }
 
 /* title pour logo ohmyfood */
@@ -341,7 +341,7 @@ nav li span {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-right: 6.25rem;
+  margin-right: 6rem;
 }
 
 .localisation {

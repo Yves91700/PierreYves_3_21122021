@@ -138,11 +138,12 @@ nav {
     justify-content: center;
     align-items: center;
     height: auto;
+    
     & ul {
-       margin: auto;
+       margin-left: -40px;
     }
     & li {
-        width: 280px;
+        width: 290px;
     }  
 }
 
@@ -152,7 +153,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-right: 6.25rem;
+    margin-right: 6rem;
 }
 
 .localisation{
