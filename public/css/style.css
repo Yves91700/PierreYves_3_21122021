@@ -396,10 +396,11 @@ nav li span {
   display: flex;
   position: relative;
   top: -10rem;
-  right: -12rem;
+  right: -12.5rem;
   width: 90px;
   height: 30px;
   text-align: center;
+  justify-content: center;
   line-height: 1.8;
   color: #2c9c81;
   background-color: #99E2D0;
@@ -411,10 +412,11 @@ nav li span {
   display: flex;
   position: relative;
   top: -10rem;
-  right: -12rem;
+  right: -12.5rem;
   width: 90px;
   height: 30px;
   text-align: center;
+  justify-content: center;
   line-height: 1.8;
   color: #2c9c81;
   background-color: #99E2D0;
