@@ -332,6 +332,9 @@ nav li span {
 .menu ul {
   margin: auto;
 }
+.menu li {
+  width: 280px;
+}
 
 /* title pour logo ohmyfood */
 .title {
