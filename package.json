@@ -4,7 +4,8 @@
   "description": "projet 3 formation développeur web Openclassrooms",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch ./main.scss:public/css/style.css"
+    "sass": "sass --watch ./main.scss:public/css/style.css",
+    "prefix": "postcss public/css/style.css --use autoprefixer -d public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,8 +13,14 @@
   },
   "author": "\"Yves91700\"",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Yves91700/projet-Oh-my-Food/issues"
   },
-  "homepage": "https://github.com/Yves91700/projet-Oh-my-Food#readme"
+  "homepage": "https://github.com/Yves91700/projet-Oh-my-Food#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0"
+  }
 }
