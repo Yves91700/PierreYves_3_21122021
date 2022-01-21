@@ -44,4 +44,12 @@
         background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
         box-shadow: 4px 10px 10px grey;
     }
+    @media all and (min-width:1023px){
+        position: relative;
+        top: 10rem;
+    }
+    @media all and (min-width:1400px){
+        position: relative;
+        top: 7rem;
+    }
 }

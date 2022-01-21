@@ -15,6 +15,14 @@
   animation-delay: 2S;
   animation-fill-mode: forwards;
 }
+.loader p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "shrikhand", cursive;
+  font-size: 1.5rem;
+  height: 50vh;
+}
 
 /* animation du loader*/
 @keyframes disappear {
@@ -32,20 +40,20 @@
   border-left: 10px solid #99E2D0;
   border-right: 10px solid #99E2D0;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   -webkit-animation: spin 3s linear infinite;
   -o-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
-  /* placement du loader au milieu de la page */
+  /* placement du spinner au milieu de la page */
   margin: auto;
-  /* ca va centrer le loader au centre de la page */
+  /* ca va centrer le spinner au centre de la page */
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  /* on mettant tout les marges a 0 le loader se trouve en plein milieu de la page */
+  /* on mettant tout les marges a 0 le spinner se trouve en plein milieu de la page */
 }
 
 /* animation du spinner*/
@@ -237,6 +245,96 @@ main h2 {
   margin-left: 20px;
 }
 
+@media all and (min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 3.5fr;
+  }
+}
+@media all and (min-width: 1023px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr;
+  }
+}
+
+@media all and (min-width: 500px) {
+  .container-case1 {
+    padding-left: 80px;
+  }
+  .container-case1 h2 {
+    margin-left: -60px;
+  }
+}
+@media all and (min-width: 700px) {
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-right: 100px;
+    padding-left: 40px;
+  }
+  .container-case1 h2 {
+    position: absolute;
+    top: 0;
+    margin-left: 0px;
+  }
+  .container-case1 .restaurant__img--new2 {
+    position: relative;
+    right: -9rem;
+    top: -10rem;
+  }
+  .container-case1 .restaurant__img--new {
+    position: relative;
+    right: -9rem;
+    top: -10rem;
+  }
+  .container-case1 .logo {
+    padding-left: 40px;
+  }
+  .container-case1 .title a {
+    margin-right: 10rem;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 0px;
+  }
+  .container-case1 .card {
+    margin-top: 60px;
+  }
+}
+@media all and (min-width: 1023px) {
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    padding-left: 10rem;
+  }
+  .container-case1 h2 {
+    left: 1rem;
+  }
+}
+@media all and (min-width: 1200px) {
+  .container-case1 {
+    padding-left: 16rem;
+  }
+}
+@media all and (min-width: 1400px) {
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: auto;
+    padding-left: 23rem;
+  }
+}
+@media all and (min-width: 1900px) {
+  .container-case1 {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: auto;
+    padding-left: 40rem;
+  }
+}
+
 .fond {
   background-color: #f2f2f2;
   border-radius: 3rem 3rem 0 0;
@@ -246,6 +344,21 @@ main h2 {
   margin-right: 0px;
   padding-right: 0px;
   top: 220px;
+}
+@media all and (min-width: 1023px) {
+  .fond {
+    height: 800px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .fond {
+    height: 800px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .fond {
+    height: 800px;
+  }
 }
 
 .fond-accueil {
@@ -267,6 +380,11 @@ main h2 {
   margin-right: 0px;
   padding-right: 0px;
   top: 220px;
+}
+@media all and (min-width: 1023px) {
+  .fond-enchantee {
+    height: 800px;
+  }
 }
 
 /* nav pour la partie commander page accueil*/
@@ -335,6 +453,20 @@ nav li span {
 .menu li {
   width: 290px;
 }
+@media all and (min-width: 700px) {
+  .menu li {
+    width: 600px;
+  }
+  .menu p {
+    padding-left: 150px;
+  }
+}
+
+@media all and (min-width: 1023px) {
+  .menud {
+    padding-bottom: 80px;
+  }
+}
 
 /* title pour logo ohmyfood */
 .title {
@@ -342,6 +474,25 @@ nav li span {
   align-items: center;
   justify-content: space-around;
   margin-right: 6rem;
+}
+@media all and (min-width: 1023px) {
+  .title a {
+    margin-right: 20rem;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 0px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .title a {
+    display: flex;
+    margin-left: 0px;
+  }
+}
+@media all and (min-width: 1900px) {
+  .title {
+    margin-left: 0px;
+  }
 }
 
 .localisation {
@@ -391,6 +542,17 @@ nav li span {
 .logo h1 {
   margin-left: 50px;
 }
+@media all and (min-width: 1023px) {
+  .logo {
+    display: flex;
+    padding-left: 90px;
+  }
+}
+@media all and (min-width: 1900px) {
+  .logo {
+    padding-left: 150px;
+  }
+}
 
 .restaurant__img--new {
   display: flex;
@@ -407,6 +569,13 @@ nav li span {
   font-weight: bold;
   border-radius: 2px;
 }
+@media all and (min-width: 800px) {
+  .restaurant__img--new .restaurant__img--new {
+    position: relative;
+    right: -15rem;
+    top: -10rem;
+  }
+}
 
 .restaurant__img--new2 {
   display: flex;
@@ -422,6 +591,13 @@ nav li span {
   background-color: #99E2D0;
   font-weight: bold;
   border-radius: 2px;
+}
+@media all and (min-width: 800px) {
+  .restaurant__img--new2 .restaurant__img--new2 {
+    position: relative;
+    right: -15rem;
+    top: -10rem;
+  }
 }
 
 .cardimg1 {
@@ -541,182 +717,6 @@ nav li span {
 }
 
 /*debut des medias queries*/
-@media all and (min-width: 500px) {
-  .container-case1 {
-    padding-left: 80px;
-  }
-
-  .container-case1 h2 {
-    margin-left: -60px;
-  }
-}
-@media all and (min-width: 700px) {
-  .menu li {
-    width: 600px;
-  }
-  .menu li p {
-    padding-left: 150px;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 3.5fr;
-  }
-
-  .container-case1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    padding-right: 100px;
-    padding-left: 40px;
-  }
-  .container-case1 h2 {
-    position: absolute;
-    top: 0;
-    margin-left: 0px;
-  }
-  .container-case1 .restaurant__img--new2 {
-    position: relative;
-    right: -10rem;
-    top: -10rem;
-  }
-  .container-case1 .restaurant__img--new {
-    position: relative;
-    right: -10rem;
-    top: -10rem;
-  }
-
-  .logo {
-    padding-left: 40px;
-  }
-
-  .title a {
-    margin-right: 10rem;
-    justify-content: flex-start;
-    padding-left: 0;
-    margin-left: 0px;
-  }
-
-  .card {
-    margin-top: 60px;
-  }
-}
-@media all and (min-width: 800px) {
-  .restaurant__img--new2 {
-    position: relative;
-    right: -15rem;
-    top: -10rem;
-  }
-
-  .restaurant__img--new {
-    position: relative;
-    right: -15rem;
-    top: -10rem;
-  }
-}
-@media all and (min-width: 1023px) {
-  .container {
-    display: grid;
-    grid-template-columns: 1.2fr 1.2fr 1.2fr;
-  }
-
-  .logo {
-    display: flex;
-    padding-left: 90px;
-  }
-
-  .title a {
-    margin-right: 20rem;
-    justify-content: flex-start;
-    padding-left: 0;
-    margin-left: 0px;
-  }
-
-  .container-case1 {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: auto;
-    padding-left: 10rem;
-  }
-  .container-case1 h2 {
-    left: 1rem;
-  }
-
-  .fond {
-    height: 800px;
-  }
-
-  .fond-enchantee {
-    height: 800px;
-  }
-
-  .menud {
-    padding-bottom: 80px;
-  }
-
-  .btn1 {
-    position: relative;
-    top: 10rem;
-  }
-
-  footer {
-    height: 300px;
-  }
-
-  footer ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 2rem;
-  }
-}
-@media all and (min-width: 1200px) {
-  .container-case1 {
-    padding-left: 16rem;
-  }
-
-  .fond {
-    height: 700px;
-  }
-}
-@media all and (min-width: 1400px) {
-  .container-case1 {
-    display: grid;
-    grid-template-columns: 4fr 4fr;
-    grid-template-rows: auto;
-    padding-left: 23rem;
-  }
-
-  .btn1 {
-    position: relative;
-    top: 7rem;
-  }
-
-  .title a {
-    display: flex;
-    margin-left: 0px;
-  }
-
-  .fond {
-    height: 800px;
-  }
-}
-@media all and (min-width: 1900px) {
-  .container-case1 {
-    display: grid;
-    grid-template-columns: 4fr 4fr;
-    grid-template-rows: auto;
-    padding-left: 40rem;
-  }
-
-  .title a {
-    margin-left: 0px;
-  }
-
-  .logo {
-    padding-left: 150px;
-  }
-}
 /* fin media queries*/
 h2, h3, h5, p, li, div, a {
   font-family: "roboto", sans serif;
@@ -767,6 +767,18 @@ h2, h3, h5, p, li, div, a {
 .btn1:hover {
   background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
   box-shadow: 4px 10px 10px grey;
+}
+@media all and (min-width: 1023px) {
+  .btn1 {
+    position: relative;
+    top: 10rem;
+  }
+}
+@media all and (min-width: 1400px) {
+  .btn1 {
+    position: relative;
+    top: 7rem;
+  }
 }
 
 header {
@@ -822,6 +834,17 @@ footer a {
   text-decoration: none;
   font-family: "roboto", sans serif;
   padding-left: 20px;
+}
+@media all and (min-width: 1023px) {
+  footer {
+    height: 300px;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

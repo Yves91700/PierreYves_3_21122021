@@ -1,5 +1,6 @@
-.loader/*creation de la page loader*/
+.loader /*creation de la page loader*/
 {
+  
     background-color: #ffff;
     opacity: 0.9;
     position: fixed;
@@ -12,8 +13,17 @@
     animation: disappear 1s;
     animation-delay: 2S;
     animation-fill-mode: forwards;
-    
-    
+    & p {
+      
+      display:flex;
+      justify-content: center;
+      align-items: center;
+     
+      font-family: $font-logo-title;
+      font-size: 1.5rem;
+      height: 50vh;
+    }
+         
 }
 /* animation du loader*/
 @keyframes disappear {
@@ -33,19 +43,23 @@
     border-left:10px solid $color-tertiary;
     border-right:10px solid $color-tertiary;
 	border-radius: 50%;
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	-webkit-animation:spin 3s linear infinite ;
 	-o-animation:spin 3s linear infinite ;
 	animation: spin 3s linear infinite;
 
-	/* placement du loader au milieu de la page */
+	/* placement du spinner au milieu de la page */
 
-	margin: auto; /* ca va centrer le loader au centre de la page */
+	margin: auto; /* ca va centrer le spinner au centre de la page */
 
-	position:absolute;
-	top: 0; left: 0; right: 0; bottom: 0; /* on mettant tout les marges a 0 le loader se trouve en plein milieu de la page */
+  position:absolute;
+	top: 0; left: 0; right: 0; bottom: 0; /* on mettant tout les marges a 0 le spinner se trouve en plein milieu de la page */
+  
+  
+ 
 }
+
 
 /* animation du spinner*/
 @keyframes spin {
