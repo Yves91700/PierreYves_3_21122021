@@ -2,9 +2,7 @@ body {
     width: 100%;
     margin: 0;
 }
-.grille{
-    
-    
+.grille{  
     height: auto;
     
     display: flex;
@@ -343,24 +341,19 @@ nav {
 
 .restaurant__img--new {
    @include card-new;
-   @media all and (min-width:800px){
-    .restaurant__img--new{
-        position: relative;
-        right: -15rem;
-        top: -10rem;
-    } 
-    
-   }
+   @media all and (min-width:800px){   
+   // right: -15rem;
+    top: -10rem;
+} 
+
 }
 
 .restaurant__img--new2 {
     @include card-new;
-   @media all and (min-width:800px){
-    .restaurant__img--new2{
+    @media all and (min-width:800px){
         position: relative;
-          right:-15rem;
-           top: -10rem;   
-       }
+         // right:-20rem;
+           top: -10rem;     
    } 
 }
 
@@ -491,15 +484,4 @@ font-size: 16px;
     margin-left:10px;
     width: 50px;
     border-top: 3px solid $color-tertiary;
-}
-
-/*debut des medias queries*/ 
-
-
-  
-
-
-
-  
-
- /* fin media queries*/ 
+} 

@@ -23,6 +23,11 @@
   font-size: 1.5rem;
   height: 50vh;
 }
+@media all and (max-height: 450px) {
+  .loader p {
+    height: 70vh;
+  }
+}
 
 /* animation du loader*/
 @keyframes disappear {
@@ -570,9 +575,7 @@ nav li span {
   border-radius: 2px;
 }
 @media all and (min-width: 800px) {
-  .restaurant__img--new .restaurant__img--new {
-    position: relative;
-    right: -15rem;
+  .restaurant__img--new {
     top: -10rem;
   }
 }
@@ -593,9 +596,8 @@ nav li span {
   border-radius: 2px;
 }
 @media all and (min-width: 800px) {
-  .restaurant__img--new2 .restaurant__img--new2 {
+  .restaurant__img--new2 {
     position: relative;
-    right: -15rem;
     top: -10rem;
   }
 }
@@ -716,8 +718,6 @@ nav li span {
   border-top: 3px solid #99E2D0;
 }
 
-/*debut des medias queries*/
-/* fin media queries*/
 h2, h3, h5, p, li, div, a {
   font-family: "roboto", sans serif;
 }
