@@ -269,6 +269,11 @@ nav {
     & li {
         width: 290px;
     } 
+    @media all and (max-width:370px){
+        li {
+            width: 280px;
+        }
+    }
     @media all and (min-width:700px){
         li {
             width: 600px;
