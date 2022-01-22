@@ -491,6 +491,7 @@ nav li span {
 }
 .menu li {
   width: 290px;
+  padding-left: 1Opx;
 }
 @media all and (max-width: 370px) {
   .menu li {
