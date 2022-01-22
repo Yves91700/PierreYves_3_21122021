@@ -23,6 +23,11 @@
   font-size: 1.5rem;
   height: 50vh;
 }
+@media all and (min-width: 370px) {
+  .loader p {
+    height: 40vh;
+  }
+}
 @media all and (max-height: 450px) {
   .loader p {
     height: 70vh;
@@ -307,6 +312,22 @@ main h2 {
     margin-top: 60px;
   }
 }
+@media all and (min-width: 750px) {
+  .container-case1 .restaurant__img--new {
+    right: -11.5rem;
+  }
+  .container-case1 .restaurant__img--new2 {
+    right: -11.5rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .container-case1 .restaurant__img--new {
+    right: -12.5rem;
+  }
+  .container-case1 .restaurant__img--new2 {
+    right: -12.5rem;
+  }
+}
 @media all and (min-width: 1023px) {
   .container-case1 {
     display: grid;
@@ -574,11 +595,6 @@ nav li span {
   font-weight: bold;
   border-radius: 2px;
 }
-@media all and (min-width: 800px) {
-  .restaurant__img--new {
-    top: -10rem;
-  }
-}
 
 .restaurant__img--new2 {
   display: flex;
@@ -594,12 +610,6 @@ nav li span {
   background-color: #99E2D0;
   font-weight: bold;
   border-radius: 2px;
-}
-@media all and (min-width: 800px) {
-  .restaurant__img--new2 {
-    position: relative;
-    top: -10rem;
-  }
 }
 
 .cardimg1 {
