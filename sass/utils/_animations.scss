@@ -21,8 +21,8 @@
       font-family: $font-logo-title;
       font-size: 1.5rem;
       height: 50vh;
-      @media all and (min-width:370px){
-        height: 40vh;
+      @media all and (max-width:370px){
+        height: 30vh;
       }
       @media all and (max-height:450px){
         height: 70vh;
@@ -161,7 +161,9 @@
         text-overflow: ellipsis;
         width: 80%;
     }
-    
+    @media all and (max-width:370px){
+      width: 90%;
+    }
   } 
 
 

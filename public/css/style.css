@@ -23,9 +23,9 @@
   font-size: 1.5rem;
   height: 50vh;
 }
-@media all and (min-width: 370px) {
+@media all and (max-width: 370px) {
   .loader p {
-    height: 40vh;
+    height: 30vh;
   }
 }
 @media all and (max-height: 450px) {
@@ -156,6 +156,11 @@
   text-overflow: ellipsis;
   width: 80%;
 }
+@media all and (max-width: 370px) {
+  .card__description {
+    width: 90%;
+  }
+}
 
 .card__check {
   display: flex;
@@ -268,6 +273,14 @@ main h2 {
   }
 }
 
+@media all and (max-width: 370px) {
+  .container-case1 .restaurant__img--new {
+    right: -11.5rem;
+  }
+  .container-case1 .restaurant__img--new2 {
+    right: -11.5rem;
+  }
+}
 @media all and (min-width: 500px) {
   .container-case1 {
     padding-left: 80px;
@@ -501,6 +514,11 @@ nav li span {
   justify-content: space-around;
   margin-right: 6rem;
 }
+@media all and (max-width: 370px) {
+  .title {
+    margin-left: 20px;
+  }
+}
 @media all and (min-width: 1023px) {
   .title a {
     margin-right: 20rem;
@@ -664,6 +682,11 @@ nav li span {
   padding-left: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media all and (max-width: 370px) {
+  .card {
+    width: 85%;
+  }
 }
 
 .subtitle {

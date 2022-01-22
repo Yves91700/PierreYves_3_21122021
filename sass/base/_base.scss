@@ -46,6 +46,14 @@ main{
 }
 
 .container-case1{
+    @media all and (max-width:370px){
+        .restaurant__img--new{
+            right: -11.5rem;
+        }
+        .restaurant__img--new2{
+            right: -11.5rem;
+        }
+    }
     @media all and (min-width:500px){
         padding-left: 80px;
         & h2{
@@ -283,6 +291,9 @@ nav {
     align-items: center;
     justify-content: space-around;
     margin-right: 6rem;
+    @media all and (max-width:370px){
+        margin-left: 20px;
+    }
     @media all and (min-width:1023px){
         & a{
             margin-right: 20rem;
@@ -425,7 +436,9 @@ font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
+@media all and (max-width:370px){
+    width: 85%;
+}
 }
 
   
