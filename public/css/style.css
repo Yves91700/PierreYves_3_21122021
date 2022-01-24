@@ -171,6 +171,7 @@
   width: 20%;
   height: 100%;
   transform: translateX(100%);
+  /*pour le faire disparaitre de la card*/
   transition: transform 0.2s;
 }
 .card__check i {
@@ -491,7 +492,6 @@ nav li span {
 }
 .menu li {
   width: 290px;
-  padding-left: 1Opx;
 }
 @media all and (max-width: 370px) {
   .menu li {
@@ -586,7 +586,6 @@ nav li span {
   height: 80px;
   display: flex;
   justify-content: center;
-  padding-left: 4Opx;
   background-color: white;
 }
 .logo h1 {
@@ -731,7 +730,6 @@ nav li span {
   background-size: cover;
   background-position: center;
   position: absolute;
-  top: 0.3;
   right: 0;
   width: 100%;
   height: 230px;
