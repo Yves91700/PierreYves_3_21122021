@@ -364,6 +364,8 @@ nav {
     background-color: white;
     & h1{
         margin-left: 50px;
+        font-family: $font-logo-title;
+        font-weight: 900;   
     }
     @media all and (min-width:1023px){
         display: flex;

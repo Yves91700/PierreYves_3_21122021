@@ -590,6 +590,8 @@ nav li span {
 }
 .logo h1 {
   margin-left: 50px;
+  font-family: "shrikhand", cursive;
+  font-weight: 900;
 }
 @media all and (min-width: 1023px) {
   .logo {
